@@ -18,7 +18,7 @@ import streamlit.components.v1 as components
 opciones_2 = option_menu(
     menu_title="Menú: ", 
     options=['Presentación', 'Experiencia', 'Gráficos'], 
-    icons=['window-stack','gear-fill', '2-circle'], 
+    icons=['people','emoji-laughing-fill', 'easel'], 
     menu_icon="cast", default_index=0, orientation="horizontal") # none
 
 if opciones_2 == 'Presentación':
@@ -39,7 +39,7 @@ if opciones_2 == 'Presentación':
     col1, col2 = st.columns(2)
     
     texto_2 = """
-    ¡Hola! Soy Yasuri, estudiante de comunicación audiovisual. Soy fan del K-pop (especialmente BTS) y no me gustan las fiestas porque me da sueño muy temprano, mis amigos dicen que soy un viejita en el cuerpo de una persona de 20 años. Esperamos les guste el blog que hicimos con tanta dedicación. ¡Esperamos aportar un granito de arena a este curso con nuestro proyecto!
+    ¡Hola! Soy Yasuri, estudiante de Comunicación Audiovisual. Soy fan del K-pop (especialmente BTS) y no me gustan las fiestas porque me da sueño muy temprano, mis amigos dicen que soy un viejita en el cuerpo de una persona de 20 años. Esperamos les guste el blog que hicimos con tanta dedicación. ¡Esperamos aportar un granito de arena a este curso con nuestro proyecto!
     """
     col1.markdown(f"<div style='text-align: justify; font-size: 15px;'>{texto_2}</div>", unsafe_allow_html=True)
     
@@ -47,7 +47,7 @@ if opciones_2 == 'Presentación':
     
 elif  opciones_2 == 'Experiencia':
 
-    st.markdown("<h1 style='text-align: center; font-size: 50 px; color: black'>Nombre a la sección de experiencia 💻</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 50 px; color: black'>Nuestra experiencia y videos 💻</h1>", unsafe_allow_html=True)
 
     # Alumno a
     texto_3 = """
@@ -64,23 +64,20 @@ elif  opciones_2 == 'Experiencia':
     # st.video("https://www.youtube.com/watch?v=X_Z7d04x9-E")
     
     # Formato Google Drive
-    st.subheader("🎥 Condicionales")
+    # Video 1 - Sofia
+    st.subheader("🎥 Estructuras condicionales")
 
     col1, col2, col3 = st.columns([1, 2, 1])
 
     with col2:  
-        st.link_button("🎥 Texto del botón",
-                       "https://drive.google.com/file/d/1lRspHKXyLSrD7RtK3kzYDyh2mEbonQYP/view?usp=sharing",
+        st.link_button("🎥 Mira el video aquí >>",
+                       "https://drive.google.com/file/d/1h_DUh-bDni-EzudxrKC5yopkWndQZh6t/view?usp=sharing",
                        use_container_width=True
             )
 
     # Alumno b
     texto_4 = """
-    Aquí escribe tu experiencia aprendiendo a programar. 
-    ¿Cómo te sentiste al principio?
-    ¿Qué te ha enseñado la programación?
-    ¿Qué te gusta de programar? 
-    ¿Qué te gustaría hacer con la programación en el futuro?
+    Cuando supe que iba a "programar" me asusté y pensé que sería muy dificil. Sin embargo, con la práctica me di cuenta de que no es muy complicado. La programación me ha enseñado a que es posible para cualquier persona usar esta herramiento y no solo las personas de ingeniería. Lo que me gusta de programar es que a través de solo códigos podamos hacer grandes cosas -Yasuri. 
     """
     st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_4}</div>", unsafe_allow_html=True)
         
@@ -89,15 +86,29 @@ elif  opciones_2 == 'Experiencia':
     # st.video("https://www.youtube.com/watch?v=X_Z7d04x9-E")
         
     # Formato Google Drive
-    st.subheader("🎥 Título apropiado video 2")
+    # VIDEO 2 - Yasuri
+    st.subheader("🎥 Strings y listas")
     
     col1, col2, col3 = st.columns([1, 2, 1])
     
     with col2:  
-        st.link_button("🎥 Texto del botón",
-                       "https://drive.google.com/file/d/1REvRXSu3GuGD73w8j44135MkRiezd0gP/view?usp=drive_link",
+        st.link_button("🎥 Mira el video aquí",
+                       "https://drive.google.com/file/d/1npm1POLdNr69TrULSe5PzwM0DLpymoUB/view?usp=drive_link",
                        use_container_width=True
              )
+        
+    # Formato Google Drive
+    # VIDEO 3 - Yasuri y Sofia
+    st.subheader("🎥 Estructuras condicionales")
+    
+    col1, col2, col3 = st.columns([1, 2, 1])
+    
+    with col2:  
+        st.link_button("🎥 Mira el video aquí >>",
+                       "https://drive.google.com/file/d/1lRspHKXyLSrD7RtK3kzYDyh2mEbonQYP/view?usp=sharing",
+                       use_container_width=True
+             )
+    
             
 else:
 
@@ -109,31 +120,31 @@ else:
     grafico_seleccionado = st.selectbox('Selecciona un gráfico', graficos)
     
     if grafico_seleccionado == 'Gráfico_1':
-        st.subheader("📊 Gráfico 1: Lenguas aisladas")
+        st.subheader("📊 Gráfico 1: Wordcloud - Yasuri")
         texto_5 = """
-        Interpretación del Gráfico 1
+        Este Wordcloud muestra la primera parte del libro La vegetariana (Hang Kang), las palabras mas grandes son las palabras que se repiten constantemente y las palabras mas pequeñas las que menos se repiten. Para crear este Wordcloud, primero se depuró el texto quitándole los stopwords, signos de puntuación y convirtiendo el texto a minúsculas.
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_5}</div>", unsafe_allow_html=True)
 
         col1, col2, col3 = st.columns([1, 7, 1])
         with col2:
-                st.image("aisladas_base_datos.png", width=800)
+                st.image("wordcloud.png", width=1000)
 
     elif grafico_seleccionado == 'Gráfico_2':
-        st.subheader("📊 Gráfico 2: Familias lingüísticas")
+        st.subheader("📊 Gráfico 2: Histograma - Yasuri")
         texto_6 = """
-        Interpretación del Gráfico 2
+        El hsitograma muestra la distribución de los goles anotados como Local y  goles recibidos como Visitante del equipo Athlético Madrid. Anotaron más goles de los que recibieron. 
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_6}</div>", unsafe_allow_html=True)
     
         col1, col2, col3 = st.columns([1, 7, 1])
         with col2:
-            st.image("lengua_familia_GB.png", width=800)
+            st.image("histograma.png", width=800)
     
     else:
-        st.subheader("🗺️ Mapa 1: Distribución geográfica")
+        st.subheader("🗺️ Mapa 1: Distribución geográfica - Yasuri")
         texto_7 = """
-        Interpretación del mapa
+        El mapa muestra el lugar de nacimiento de los pilotos L. Hamilton (Inglaterra) y L. Perez (México), con algunos datos como el nombre del piloto, el nombre de la escudería, el puntaje total que iobtuvieron en el F1-2016 y una imagen de de ellos. 
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_7}</div>", unsafe_allow_html=True)
             
