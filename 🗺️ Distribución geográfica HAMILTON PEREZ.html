@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e117545ced9ac3f32879339c9bd7e153 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e117545ced9ac3f32879339c9bd7e153" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e117545ced9ac3f32879339c9bd7e153 = L.map(
+                "map_e117545ced9ac3f32879339c9bd7e153",
+                {
+                    center: [1.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_e117545ced9ac3f32879339c9bd7e153);
+
+            
+
+        
+    
+            var tile_layer_20dbf5ad2b7f5b1780e4d2f57d90c924 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap contributors\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+  "referrerPolicy": "strict-origin",
+}
+
+            );
+        
+    
+            tile_layer_20dbf5ad2b7f5b1780e4d2f57d90c924.addTo(map_e117545ced9ac3f32879339c9bd7e153);
+        
+    
+            var marker_ad010f959f7ffc38c13d849bd8925d05 = L.marker(
+                [51.906829787725464, -0.19249459430151628],
+                {
+}
+            ).addTo(map_e117545ced9ac3f32879339c9bd7e153);
+        
+    
+            var icon_e85bc04a0c48579c4acd09429494d989 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be280d63f84f082c3deebdccb8b91d6d = L.popup({
+  "maxWidth": 100,
+});
+
+        
+            
+                var html_331ba0f842aa4a486eafd9200c4268cd = $(`<div id="html_331ba0f842aa4a486eafd9200c4268cd" style="width: 100.0%; height: 100.0%;">                 <div style="text-align:center; margin-bottom:15px;">                      <img src="https://e0.365dm.com/16/06/2048x1152/f1-lewis-hamilton-mercedes_3483039.jpg?20160612221848"                          width="100"                          height="100"                          style="object-fit:cover; border-radius:50%;">                      <b>L. HAMILTON</b>                     <ol>Mercedes</ol>                     <ol>380</ol>                  </div>                 </div>`)[0];
+                popup_be280d63f84f082c3deebdccb8b91d6d.setContent(html_331ba0f842aa4a486eafd9200c4268cd);
+            
+        
+
+        marker_ad010f959f7ffc38c13d849bd8925d05.bindPopup(popup_be280d63f84f082c3deebdccb8b91d6d)
+        ;
+
+        
+    
+    
+            marker_ad010f959f7ffc38c13d849bd8925d05.bindTooltip(
+                `<div>
+                     L. HAMILTON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad010f959f7ffc38c13d849bd8925d05.setIcon(icon_e85bc04a0c48579c4acd09429494d989);
+            
+    
+            var marker_faf9db7db62913a6d16379f060d9de0a = L.marker(
+                [20.675140443262627, -103.34996903133975],
+                {
+}
+            ).addTo(map_e117545ced9ac3f32879339c9bd7e153);
+        
+    
+            var icon_b0893327d1c4898c73478a740d1f8d86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_104140dd6bcd88469ff2c70380ae940c = L.popup({
+  "maxWidth": 100,
+});
+
+        
+            
+                var html_f38328111f5f5b3b6c161ad6ba480974 = $(`<div id="html_f38328111f5f5b3b6c161ad6ba480974" style="width: 100.0%; height: 100.0%;">                 <div style="text-align:center; margin-bottom:15px;">                      <img src="https://e0.365dm.com/16/05/1600x900/sergio-perez-force-india_3475514.jpg?20160529174244"                          width="100"                          height="100"                          style="object-fit:cover; border-radius:50%;">                      <b>S.PEREZ</b>                     <ol>Force India</ol>                     <ol>101</ol>                  </div>                 </div>`)[0];
+                popup_104140dd6bcd88469ff2c70380ae940c.setContent(html_f38328111f5f5b3b6c161ad6ba480974);
+            
+        
+
+        marker_faf9db7db62913a6d16379f060d9de0a.bindPopup(popup_104140dd6bcd88469ff2c70380ae940c)
+        ;
+
+        
+    
+    
+            marker_faf9db7db62913a6d16379f060d9de0a.bindTooltip(
+                `<div>
+                     S.PEREZ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_faf9db7db62913a6d16379f060d9de0a.setIcon(icon_b0893327d1c4898c73478a740d1f8d86);
+            
+</script>
+</html>
